@@ -1,3 +1,4 @@
+#![allow(deprecated)]
 //! Multipart requests which write out their data in one fell swoop.
 use mime::Mime;
 

@@ -1,3 +1,4 @@
+#![allow(deprecated)]
 // Copyright 2016 `multipart` Crate Developers
 //
 // Licensed under the Apache License, Version 2.0, <LICENSE-APACHE or
@@ -27,7 +28,7 @@ macro_rules! invalid_cont_disp {
         return Err(ParseHeaderError::InvalidContDisp(
             $reason,
             $cause.to_string(),
-        ));
+        ))
     };
 }
 
@@ -530,8 +531,6 @@ impl<M: ReadEntry, Entry> ReadEntryResult<M, Entry> {
         }
     }
 }
-
-const GENERIC_PARSE_ERR: &str = "an error occurred while parsing field headers";
 
 quick_error! {
     #[derive(Debug)]

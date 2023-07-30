@@ -22,7 +22,8 @@ lazy_static = { version = "1.2.0", optional = true }
 log = "0.4"
 mime = "0.3.14"
 mime_guess = "2.0.1"
-rand = "0.8"
+# rand = "0.8"
+fastrand = "1.8.0"
 safemem = { version = "0.3", optional = true }
 tempfile = "3"
 clippy = { version = ">=0.0, <0.1", optional = true}
@@ -52,38 +53,6 @@ server = ["buf_redux", "httparse", "quick-error", "safemem", "twoway"]
 mock = []
 nightly = []
 bench = []
-
-[[example]]
-name = "hyper_client"
-required-features = ["client", "mock", "hyper"]
-
-[[example]]
-name = "hyper_reqbuilder"
-required-features = ["client", "mock", "hyper"]
-
-[[example]]
-name = "hyper_server"
-required-features = ["mock", "hyper", "server"]
-
-[[example]]
-name = "iron"
-required-features = ["mock", "iron", "server"]
-
-[[example]]
-name = "iron_intercept"
-required-features = ["mock", "iron", "server"]
-
-[[example]]
-name = "nickel"
-required-features = ["mock", "nickel", "server"]
-
-[[example]]
-name = "tiny_http"
-required-features = ["mock", "tiny_http", "server"]
-
-[[example]]
-name = "rocket"
-required-features = ["mock", "rocket", "server"]
 
 [[bin]]
 name = "form_test"
